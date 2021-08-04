@@ -106,6 +106,8 @@ if(BUILD_BENCHMARKS AND CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
 endif()
 
 # install export targets
+include(CPack)
+
 install(TARGETS rmm EXPORT rmm-exports)
 install(DIRECTORY include/rmm/ DESTINATION include/rmm)
 install(FILES ${RMM_BINARY_DIR}/include/rmm/version_config.hpp DESTINATION include/rmm)
